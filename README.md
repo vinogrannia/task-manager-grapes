@@ -27,15 +27,6 @@ This project is a rebuild of my CS50-style Flask task manager — recreated from
 
 ---
 
-## Run Locally
-
-```bash
-# create venv
-python3 -m venv .venv
-source .venv/bin/activate
-
----
-
 ## Roadmap
 Planned next steps:
 
@@ -45,6 +36,15 @@ Planned next steps:
 - Persist data with SQLite
 - UI improvements (CSS)
 - Optional JS enhancements
+
+---
+
+## Run Locally
+
+```bash
+# create venv
+python3 -m venv .venv
+source .venv/bin/activate
 
 # install deps
 pip install -r requirements.txt
