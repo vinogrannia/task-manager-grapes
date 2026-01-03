@@ -34,6 +34,16 @@ This project is a rebuild of my CS50-style Flask task manager — recreated from
 python3 -m venv .venv
 source .venv/bin/activate
 
+## Roadmap
+Planned next steps:
+
+- Filter / hide completed tasks
+- Duplicate task
+- Categories (add / edit / delete)
+- Persist data with SQLite
+- UI improvements (CSS)
+- Optional JS enhancements
+
 # install deps
 pip install -r requirements.txt
 
