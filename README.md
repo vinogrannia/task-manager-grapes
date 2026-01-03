@@ -1,12 +1,12 @@
-# Grapes Task Manager
+# 🍇 Grapes Task Manager
 
-A small task management web app built with **Python** and **Flask**.
+A small task management web application built with **Python** and **Flask**.
 
-This project is a rebuild of my CS50-style Flask task manager — recreated from scratch to refresh fundamentals and iterate in public.
+This project is a rebuild of a CS50-style Flask task manager, recreated from scratch to refresh core fundamentals and iterate in public.
 
 ---
 
-## Current Features
+## 🚀 Current Features
 
 - Add tasks
 - Edit tasks
@@ -14,40 +14,42 @@ This project is a rebuild of my CS50-style Flask task manager — recreated from
 - Delete tasks
 - Basic input validation (empty titles are rejected)
 
-> Note: tasks are currently stored **in memory** (no database yet). Data resets when the server restarts.
+> ⚠️ **Note:** Tasks are currently stored **in memory** (no database yet).  
+> Data resets when the server restarts.
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
 - Python
 - Flask
-- Jinja2 templates
+- Jinja2 (server-side templates)
 - HTML (server-side rendering)
 
 ---
 
-## Roadmap
+## 🧭 Roadmap
+
 Planned next steps:
 
 - Filter / hide completed tasks
-- Duplicate task
-- Categories (add / edit / delete)
-- Persist data with SQLite
+- Duplicate task functionality
+- Task categories (add / edit / delete)
+- Data persistence with SQLite
 - UI improvements (CSS)
-- Optional JS enhancements
+- Optional JavaScript enhancements
 
 ---
 
-## Run Locally
+## ▶️ Run Locally
 
 ```bash
-# create venv
+# create virtual environment
 python3 -m venv .venv
 source .venv/bin/activate
 
-# install deps
+# install dependencies
 pip install -r requirements.txt
 
-# run
+# run the app
 python -m flask --app app run --port 5050
