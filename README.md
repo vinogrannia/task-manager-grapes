@@ -34,6 +34,8 @@ This project is a rebuild of my CS50-style Flask task manager — recreated from
 python3 -m venv .venv
 source .venv/bin/activate
 
+---
+
 ## Roadmap
 Planned next steps:
 
