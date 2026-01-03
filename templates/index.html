@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"
+    <title>Task Manager</title>
+</head>
+<body>
+    <h1>Task Manager</h1>
+   {% if tasks %}
+      <ul>
+        {% for task in tasks %}
+          <li>
+            {% if task.completed %}
+              <s>{{ task.title }}</s> ✅
+            {% else %}
+              {{ task.title }}
+              <a href="/edit/{{ loop.index0 }}">Edit</a>
+              <form method="POST" action="/complete/{{ loop.index0 }}"><button type="submit">Complete</button></form>
+              <form method="POST" action="/delete/{{ loop.index0 }}"><button type="submit">Delete</button></form>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No tasks yet.</p>
+    {% endif %}
+</body>
+</html>
