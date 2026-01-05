@@ -10,7 +10,7 @@
         <p style="color: red;">{{ error }}</p>
     {% endif %}
     <form method="POST">
-        <input name="title" value="{{ task.title }}">
+        <input name="title" value="{{ task['title'] }}" required>
         <button type="submit">Save</button>
     </form>
 </body>
