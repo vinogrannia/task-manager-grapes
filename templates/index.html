@@ -1,21 +1,17 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Task Manager</title>
-</head>
-<body>
-    <h1>Task Manager</h1>
+{% extends "base.html" %}
+{% block content %}
     <p><a href="/add">Add task</a></p>
    {% if tasks %}
       <ul>
         {% for task in tasks %}
           <li>
             {% if task['completed'] %}
+              class="task completed"
               <s>{{ task['title'] }}</s> ✅
               <form method="POST" action="/delete/{{ task['id'] }}" style="display:inline;"><button type="submit">Delete</button></form>
             {% else %}
               {{ task['title'] }}
+              class="task"
               <a href="/edit/{{ task['id'] }}">Edit</a>
               <form method="POST" action="/complete/{{ task['id'] }}" style="display:inline;"><button type="submit">Complete</button></form>
               <form method="POST" action="/delete/{{ task['id'] }}" style="display:inline;"><button type="submit">Delete</button></form>
@@ -26,5 +22,4 @@
     {% else %}
       <p>No tasks yet.</p>
     {% endif %}
-</body>
-</html>
+{% endblock %}
