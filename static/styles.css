@@ -34,3 +34,6 @@ button:hover {
 li {
     margin-bottom: 10px;
 }
+.task.completed {
+    opacity: 0.6;
+}
