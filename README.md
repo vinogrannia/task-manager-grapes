@@ -1,21 +1,29 @@
 # 🍇 Grapes Task Manager
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Flask](https://img.shields.io/badge/Flask-black)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://task-manager-grapes.onrender.com/)
+
 A small task management web application built with **Python** and **Flask**.
 
-This project is a rebuild of a CS50-style Flask task manager, recreated from scratch to refresh core fundamentals and iterate in public.
+This project started as a CS50-style Flask app and is being actively developed further as a real, incremental product — with data persistence, UI improvements, and deployment.
 
 ---
 
-## 🚀 Current Features
+## 🌐 Live Demo
+
+👉 https://task-manager-grapes.onrender.com/
+
+---
+
+## ✨ Features
 
 - Add tasks
 - Edit tasks
 - Mark tasks as completed
 - Delete tasks
-- Basic input validation (empty titles are rejected)
-
-> ⚠️ **Note:** Tasks are currently stored **in memory** (no database yet).  
-> Data resets when the server restarts.
+- Persistent storage with SQLite
+- Clean UI with base layout and CSS styling
 
 ---
 
@@ -23,33 +31,45 @@ This project is a rebuild of a CS50-style Flask task manager, recreated from scr
 
 - Python
 - Flask
-- Jinja2 (server-side templates)
-- HTML (server-side rendering)
+- SQLite
+- Jinja2
+- HTML
+- CSS
+- Gunicorn (deployment)
 
 ---
 
-## 🧭 Roadmap
+## 📦 Project Structure
 
-Planned next steps:
+├── app.py
+├── db.py
+├── requirements.txt
+├── templates/
+│ ├── base.html
+│ ├── index.html
+│ ├── add.html
+│ └── edit.html
+├── static/
+│ └── styles.css
+└── .gitignore
 
-- Filter / hide completed tasks
+
+---
+
+## 🚀 Deployment
+
+The application is deployed on **Render** and connected to this GitHub repository.  
+Each push to the `main` branch triggers a new deployment.
+
+---
+
+## 🔮 Next Steps
+
+Planned improvements:
+
+- JavaScript interactivity (hide completed tasks)
 - Duplicate task functionality
-- Task categories (add / edit / delete)
-- Data persistence with SQLite
-- UI improvements (CSS)
-- Optional JavaScript enhancements
+- UI/UX polish
+- Categories and priorities
 
 ---
-
-## ▶️ Run Locally
-
-```bash
-# create virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
-# install dependencies
-pip install -r requirements.txt
-
-# run the app
-python -m flask --app app run --port 5050
